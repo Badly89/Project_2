@@ -172,6 +172,11 @@ p {
   position: relative;
 }
 
+.handrail-item img {
+  width: 346px;
+  height: 430px;
+}
+
 .content-item {
   display: -webkit-box;
   display: -ms-flexbox;
