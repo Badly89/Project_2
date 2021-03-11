@@ -4,7 +4,7 @@
 }
 
 h1 {
-  font-family: Inter;
+  font-family: 'Inter';
   font-style: normal;
   font-weight: bold;
   font-size: 50px;
@@ -149,6 +149,16 @@ p {
   margin-top: 40px;
 }
 
+.title-uslug {
+  font-family: 'Alegreya Sans';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 21px;
+  line-height: 25px;
+  text-align: center;
+  letter-spacing: 0.05em;
+}
+
 .item-list-handrail {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -156,6 +166,10 @@ p {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.handrail-item {
+  position: relative;
 }
 
 .content-item {
@@ -167,15 +181,6 @@ p {
   padding: 40px 35px 40px 80px;
 }
 
-.item1,
-.item2,
-.item3,
-.item4,
-.item5,
-.item6 {
-  position: relative;
-}
-
 .select-item1::before {
   content: "";
   display: block;
@@ -185,8 +190,8 @@ p {
   border-bottom: 44px solid #EAEAEA;
   top: -43px;
   left: 120px;
-  -webkit-transition: all 2.5s ease-out;
-  transition: all 2.5s ease-out;
+  -webkit-transition: all 1.5s ease-out;
+  transition: all 1.5s ease-out;
 }
 
 .select-item2::before {
@@ -198,8 +203,8 @@ p {
   border-bottom: 44px solid #EAEAEA;
   top: -43px;
   left: 500px;
-  -webkit-transition: all 2.5s ease-out;
-  transition: all 2.5s ease-out;
+  -webkit-transition: all 1.5s ease-out;
+  transition: all 1.5s ease-out;
 }
 
 .select-item3::before {
@@ -211,8 +216,8 @@ p {
   border-bottom: 44px solid #EAEAEA;
   top: -43px;
   right: 140px;
-  -webkit-transition: all 2.5s ease-out;
-  transition: all 2.5s ease-out;
+  -webkit-transition: all 1.5s ease-out;
+  transition: all 1.5s ease-out;
 }
 
 .select-item4::before {
@@ -224,8 +229,8 @@ p {
   border-bottom: 44px solid #EAEAEA;
   top: -43px;
   left: 120px;
-  -webkit-transition: all 2.5s ease;
-  transition: all 2.5s ease;
+  -webkit-transition: all 1.5s ease;
+  transition: all 1.5s ease;
 }
 
 .select-item5::before {
@@ -237,8 +242,8 @@ p {
   border-bottom: 44px solid #EAEAEA;
   top: -43px;
   left: 500px;
-  -webkit-transition: all 2.5s ease-out;
-  transition: all 2.5s ease-out;
+  -webkit-transition: all 1.5s ease-out;
+  transition: all 1.5s ease-out;
 }
 
 .select-item6::before {
@@ -250,16 +255,11 @@ p {
   border-bottom: 44px solid #EAEAEA;
   top: -43px;
   right: 140px;
-  -webkit-transition: all 2.5s ease-out;
-  transition: all 2.5s ease-out;
+  -webkit-transition: all 1.5s ease-out;
+  transition: all 1.5s ease-out;
 }
 
-.item1:hover .dark,
-.item2:hover .dark,
-.item3:hover .dark,
-.item4:hover .dark,
-.item5:hover .dark,
-.item6:hover .dark {
+.handrail-item:hover .dark {
   display: block;
 }
 
@@ -313,18 +313,6 @@ p {
   margin-left: 80px;
 }
 
-.handrail-item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
 .dark {
   display: none;
   position: absolute;
@@ -332,7 +320,79 @@ p {
   top: 0;
   height: 100%;
   width: 100%;
-  background-color: rgba(47, 47, 47, 0.7);
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.wrap-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.h2-title-black {
+  color: white;
+  text-align: center;
+  padding-bottom: 8px;
+}
+
+.handrail-price-black {
+  color: white;
+  font-weight: 700;
+  font-size: 18px;
+  text-align: center;
+}
+
+.p-dark {
+  text-align: center;
+  color: white;
+}
+
+.main-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 420px;
+  width: 290px;
+}
+
+.top-block {
+  margin-top: 100px;
+}
+
+.bottom-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 60px;
+}
+
+.strelka {
+  background-image: url("../img/arrow_down.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 30px;
 }
 
 /*footer*/
