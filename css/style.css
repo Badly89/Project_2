@@ -163,13 +163,15 @@ p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 .handrail-item {
   position: relative;
+  padding-bottom: 15px;
 }
 
 .handrail-item img {
@@ -183,7 +185,7 @@ p {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  padding: 40px 35px 40px 80px;
+  padding-top: 40px;
 }
 
 .select-item1::before {
@@ -194,7 +196,7 @@ p {
   border-right: 50px solid transparent;
   border-bottom: 44px solid #EAEAEA;
   top: -43px;
-  left: 120px;
+  left: 23%;
   -webkit-transition: all 1.5s ease-out;
   transition: all 1.5s ease-out;
 }
@@ -207,7 +209,7 @@ p {
   border-right: 50px solid transparent;
   border-bottom: 44px solid #EAEAEA;
   top: -43px;
-  left: 500px;
+  left: 47%;
   -webkit-transition: all 1.5s ease-out;
   transition: all 1.5s ease-out;
 }
@@ -220,7 +222,7 @@ p {
   border-right: 50px solid transparent;
   border-bottom: 44px solid #EAEAEA;
   top: -43px;
-  right: 140px;
+  right: 23%;
   -webkit-transition: all 1.5s ease-out;
   transition: all 1.5s ease-out;
 }
@@ -354,6 +356,11 @@ p {
   text-align: center;
 }
 
+.handrail-price {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
 .p-dark {
   text-align: center;
   color: white;
@@ -410,9 +417,12 @@ p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .h2-order::before {
@@ -428,8 +438,30 @@ p {
   padding-right: 35px;
 }
 
+.right-block {
+  float: right;
+  background: url("../img/img-get-order.png");
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 650px;
+  height: 654px;
+}
+
 .left-block {
-  margin-top: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-right: 40px;
 }
 
@@ -452,10 +484,20 @@ p {
   margin-top: 100px;
 }
 
-.list-portfolio img {
+.list-portfolio {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(347px, 2fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(347px, 2fr));
+  grid-gap: 40px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.img-portfolio {
   width: 347px;
   height: 250px;
-  margin-bottom: 40px;
 }
 
 /*why-are-we*/
@@ -466,6 +508,15 @@ p {
 
 .right {
   margin-left: 96px;
+}
+
+.left {
+  background: url("../img/left-pic.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right;
+  width: 427px;
+  height: 611px;
 }
 
 .list-why {
@@ -486,16 +537,40 @@ p {
 .item-list {
   padding-bottom: 20px;
   padding-left: 20px;
+  font-family: 'PT Sans Narrow';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 23px;
+  letter-spacing: 0.05em;
+  color: #000000;
 }
 
 /*footer*/
 .footer {
+  background: #F2F2F2;
+}
+
+.footer-list-menu {
+  list-style-type: none;
+  font-family: 'PT Sans Narrow';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 23px;
+  letter-spacing: 0.05em;
+  color: #000000;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  background: #F2F2F2;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.footer-menu-item {
+  padding-bottom: 22px;
 }
 
 @media screen and (min-width: 992px) {

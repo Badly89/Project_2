@@ -49,6 +49,7 @@ p {
     background-position: center center;
     background-size: cover;
     height: 100vh;
+
 }
 
 .head-title {
@@ -82,7 +83,6 @@ p {
 
 .btn-order-calc {
     margin-top: 50px;
-
 
 }
 
@@ -156,13 +156,15 @@ p {
 
 .item-list-handrail {
     display: flex;
+    flex-wrap: wrap;
     // align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
 
 }
 
 .handrail-item {
     position: relative;
+    padding-bottom: 15px;
 }
 
 .handrail-item img {
@@ -173,7 +175,7 @@ p {
 .content-item {
     display: flex;
     justify-content: space-around;
-    padding: 40px 35px 40px 80px;
+    padding-top: 40px;
 
 }
 
@@ -185,7 +187,7 @@ p {
     border-right: 50px solid transparent;
     border-bottom: 44px solid #EAEAEA;
     top: -43px;
-    left: 120px;
+    left: 23%;
     transition: all 1.5s ease-out;
 }
 
@@ -197,7 +199,7 @@ p {
     border-right: 50px solid transparent;
     border-bottom: 44px solid #EAEAEA;
     top: -43px;
-    left: 500px;
+    left: 47%;
     transition: all 1.5s ease-out;
 }
 
@@ -209,7 +211,7 @@ p {
     border-right: 50px solid transparent;
     border-bottom: 44px solid #EAEAEA;
     top: -43px;
-    right: 140px;
+    right: 23%;
     transition: all 1.5s ease-out;
 }
 
@@ -248,17 +250,6 @@ p {
     right: 140px;
     transition: all 1.5s ease-out;
 }
-
-// .item1:hover .dark,
-// .item2:hover .dark,
-// .item3:hover .dark,
-// .item4:hover .dark,
-// .item5:hover .dark,
-// .item6:hover .dark {
-//     display: block;
-
-// }
-
 
 .handrail-item:hover .dark {
     display: block;
@@ -341,6 +332,11 @@ p {
     text-align: center;
 }
 
+.handrail-price {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
 .p-dark {
     text-align: center;
     color: white;
@@ -381,8 +377,10 @@ p {
 }
 
 .wrap-block {
+    // min-width: 1040px;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
+    align-items: center;
     // background-color: #EBEBEB;
 }
 
@@ -399,9 +397,24 @@ p {
     padding-right: 35px;
 }
 
+.right-block {
+    float: right;
+    background: url("../img/img-get-order.png");
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 650px;
+    height: 654px;
+}
+
 
 .left-block {
-    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    // margin-top: 80px;
     // margin-left: 62px;
     margin-right: 40px;
 }
@@ -421,10 +434,24 @@ p {
     margin-top: 100px;
 }
 
-.list-portfolio img {
+.list-portfolio {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(347px, 2fr));
+    // grid-template-rows: repeat(auto-fill, minmax(450px, 1fr));
+    // grid-template-columns: 347px 347px 347px;
+
+    grid-gap: 40px;
+    justify-content: center;
+}
+
+.img-portfolio {
     width: 347px;
     height: 250px;
-    margin-bottom: 40px;
+
+}
+
+.wrap-porfolio {
+    // padding: 0 79px;
 }
 
 /*why-are-we*/
@@ -437,6 +464,16 @@ p {
     // margin-top: 80px;
     margin-left: 96px;
 
+
+}
+
+.left {
+    background: url("../img/left-pic.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+    width: 427px;
+    height: 611px;
 }
 
 .list-why {
@@ -450,16 +487,43 @@ p {
 .item-list {
     padding-bottom: 20px;
     padding-left: 20px;
+
+    font-family: 'PT Sans Narrow';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 23px;
+    letter-spacing: 0.05em;
+    color: #000000;
 }
+
 
 
 
 /*footer*/
 .footer {
-    display: flex;
-    justify-content: space-around;
+    // display: flex;
+    // justify-content: space-around;
     background: #F2F2F2;
     // height: 450px;
+}
+
+.footer-list-menu {
+    list-style-type: none;
+    font-family: 'PT Sans Narrow';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 23px;
+    letter-spacing: 0.05em;
+    color: #000000;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.footer-menu-item {
+    padding-bottom: 22px;
 }
 
 @media screen and (min-width: 992px) {
@@ -467,4 +531,6 @@ p {
         padding-right: 1.2rem !important;
         padding-left: 1.2rem !important;
     }
+
+
 }
